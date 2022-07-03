@@ -1,11 +1,21 @@
 {
-    "extends": "standard-with-typescript",
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
     "parserOptions": {
-        "project" : "./tsconfig.json"
+        "project": "./tsconfig.json"
     },
     "rules": {
         "@typescript-eslint/strict-boolean-expressions": "off",
         "quotes": "off",
-        "@typescript-eslint/quotes": "off"
+        "@typescript-eslint/quotes": "off",
+        "space-before-fuction-paren": "off",
+        "@typescript-eslint/space-before-function-paren": "off"
     }
 }
