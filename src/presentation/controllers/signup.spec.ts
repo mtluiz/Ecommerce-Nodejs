@@ -18,13 +18,13 @@ const makeSut = (): SutTypes => {
   }
 
   class AddAccountStub implements AddAccount {
-    add(account: AddAccountModel): AccountModel {
-      return {
+    add(account: AddAccountModel): Promise<AccountModel> {
+      return new Promise(resolve => resolve({
         id: "valid_id",
         name: 'any_name',
         email: "anyemail@mail.com",
         password: 'any_password',
-      }
+      }))
     }
   }
   const emailValidatorStub = new EmailValidatorStub()
