@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --passWithNoTests --watch",
     "test:staged": "jest --passWithNoTests",
-    "start": "sucrase-node src/main/server.ts"
+    "start": "sucrase-node src/main/server.ts",
+    "dev": "ts-node-dev src/main/server.ts"
   },
   "keywords": [],
   "author": "",
