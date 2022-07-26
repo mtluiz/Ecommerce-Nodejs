@@ -21,6 +21,14 @@ const routes = {
   },
   "POST": {
     default: defaultRoute,
+    "/hello": async (req, res) => {
+      for await (const data of req) {
+        const d = JSON.parse(data)
+        console.log(d);
+
+      }
+      return res.end()
+    }
   }
 }
 
