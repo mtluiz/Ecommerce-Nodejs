@@ -1,5 +1,10 @@
-import { app } from "./config/app"
+import app from "./config/app"
 
-const PORT = process.env.PORT || 3000
+const PORT: number = +(process.env.PORT as string) || 3000;
 
-app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`))
+app.listen({ port: PORT }, (err) => {
+  if (err) {
+    app.log.error(err)
+    process.exit(1)
+  }
+})
